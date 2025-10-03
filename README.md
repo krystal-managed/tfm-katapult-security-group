@@ -38,7 +38,7 @@ module "security_group" {
 
 # Inputs
 
-| Name -          | Description                                                  | Type          | Default | Required |
+| Name            | Description                                                  | Type          | Default | Required |
 |-----------------|--------------------------------------------------------------|---------------|---------|----------|
 | `name`          | Name of security group                                       | `string`      |         | **Yes**  |
 | `vm_ids`        | List of VM IDs to attach group to                            | `list(string)` |        | **Yes**  |
@@ -52,7 +52,7 @@ Common rules can be created automatically using the various `enable_*` variables
 
 # Rules
 When creating rules, use the following variables:
-| Name -           | Description                                                         | Type           | Default                | Required |
+| Name             | Description                                                         | Type           | Default                | Required |
 |------------------|---------------------------------------------------------------------|----------------|------------------------|----------|
 | `notes`          | Description for rule being created                                  | `string`       |                        | **Yes**  |
 | `ports`          | Specifies port(s)                                                   | `string`       | `"0"` (All ports)      | No       |
@@ -60,3 +60,4 @@ When creating rules, use the following variables:
 | `targets`        | IPs/address lists rule should be applied to                         | `list(string)` |                        | No       |
 
 The module will by default allow all outbound traffic, this can be overwritten by using the rules_out variable.
+
