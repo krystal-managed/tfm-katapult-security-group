@@ -57,7 +57,8 @@ When creating rules, use the following variables:
 | `notes`          | Description for rule being created                                  | `string`       |                        | **Yes**  |
 | `ports`          | Specifies port(s)                                                   | `string`       | `"0"` (All ports)      | No       |
 | `protocol`       | Specify protocol of the rule                                        | `string`       | `"TCP"`                | No       |
-| `targets`        | IPs/address lists rule should be applied to                         | `list(string)` |                        | No       |
+| `targets`        | IPs/address lists rule should be applied to                         | `list(string)` |                        | **Yes**  |
 
 The module will by default allow all outbound traffic, this can be overwritten by using the rules_out variable.
+
 
