@@ -3,7 +3,7 @@ locals {
     {
       protocol = "TCP"
       ports    = "22"
-      targets  = [katapult_address_list.krystal.id]
+      targets  = var.krystal_vpns
       notes    = "Krystal SSH"
     }
   ]
@@ -11,13 +11,13 @@ locals {
     {
       protocol = "TCP"
       ports    = "10050,10051"
-      targets  = [katapult_address_list.zabbix.id]
+      targets  = var.zabbix_ips
       notes    = "Zabbix"
     },
     {
       protocol = "ICMP"
       ports    = null
-      targets  = [katapult_address_list.zabbix.id]
+      targets  = var.zabbix_ips
       notes    = "Zabbix Ping"
     }
   ]
