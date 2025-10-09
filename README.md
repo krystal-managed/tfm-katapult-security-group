@@ -4,7 +4,7 @@
 
 ```hcl
 module "security_group" {
-  source = "git@github.com:krystal-managed/tfm-katapult-security-group.git"
+  source = "github.com/krystal-managed/tfm-katapult-security-group"
 
   name = "Security Group"
   vm_ids = ["vm-1234"]
@@ -60,5 +60,6 @@ When creating rules, use the following variables:
 | `targets`        | IPs/address lists rule should be applied to                         | `list(string)` |                        | **Yes**  |
 
 The module will by default allow all outbound traffic, this can be overwritten by using the rules_out variable.
+
 
 
